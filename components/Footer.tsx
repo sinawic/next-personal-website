@@ -1,67 +1,90 @@
-import { pages } from "./../helper"
-import Link from 'next/link'
-import Image from "next/image";
-import appData from './../package.json'
+import ClipboardJS from "clipboard";
+import { Button } from "react-bootstrap";
 
 export default function Layout() {
   return (
-    <footer id="stats" className="bg-light pt-5">
-      <div className="container py-5">
-        <div className="row flex-row-reverse">
-          <div className="col-sm-4 text-end ps-4">
-            <strong className="fs-4">چرا ما</strong>
-            <p className="text-justify pt-3">
-              <strong>{appData.name} </strong>
-              سعی بر آن دارد تا با فراهم آوردن امکانات
-              مورد نیاز اکثریت مردم
-              توانسته باشد کمکی در حال آنها کرده باشد.
-              در صورت داشتن پیشنهاد بسیار خوش حال می شویم تا از شما خبری بشنویم.
-              ممنون می شویم اگر حمایت شما را چه از لحاظ مالی و چه غیر مالی داشته باشیم.
-              لطفا در صورت امکان ما را در صفحات اجتماعی دنبال کنید.
-            </p>
+    <footer className="bg-dark">
+      <section id="contact">
+        <div className="text-center container py-5">
+          <div className="text-light pb-5">
+            <h3>Finally, Let's Get In Touch. Shall We!</h3>
           </div>
 
-          <div className="col-sm-4 text-end">
-            <strong className="fs-4">صفحات</strong>
-            <div className="pt-3 d-flex flex-row-reverse justify-content-between">
-              <ul>
-                {
-                  pages.map((page, i) => (
-                    <li key={i}>
-                      <Link href="/"><a>{page.title}</a></Link>
-                    </li>
-                  ))
-                }
-              </ul>
+          <div className="row justify-content-center">
+            <div className="col-sm-4 py-3">
+              <div className="py-3">
+                <span className="text-light">My Phone Number: </span>
+                <strong className="fs-3"><a href="tel:+989352641726">09352641726</a></strong>
+              </div>
 
-              <div>
-                <a href="/"><i className="fs-4 px-3 mb-4 fab fa-telegram"></i></a>
-                <a href="/"><i className="fs-4 px-3 mb-4 fab fa-instagram-square"></i></a>
-                <a href="/"><i className="fs-4 px-3 mb-4 fab fa-github-square"></i></a>
-                <a href="/"><i className="fs-4 px-3 mb-4 fab fa-stack-overflow"></i></a>
+              <div className="py-3">
+                <span className="text-light">My Email: </span>
+                <strong className="fs-3"><a href="mailto:sinawic9@gmail.com">sinawic9@gmail.com</a></strong>
               </div>
             </div>
-          </div>
 
-          <div className="col-sm-4 text-end">
-            {/* <strong className="fs-4">header</strong> */}
-            <div className="pt-5 d-flex justify-content-evenly">
-              <Image src="/images/q.png" width={64} height={64} />
-              <Image src="/images/q.png" width={64} height={64} />
-              <Image src="/images/q.png" width={64} height={64} />
+            <div className="col-sm-4 py-3">
+              <div className="py-3">
+                <span className="text-light">My Linkedin: </span>
+                <strong className="fs-3"><a href="https://www.linkedin.com/in/sinawic" target="_blank">Sina Mahmoodi</a></strong>
+              </div>
+
+              <div className="py-3">
+                <span className="text-light">My Instagram: </span>
+                <strong className="fs-3"><a href="https://www.instagram.com/react.er/" target="_blank">react.er</a></strong>
+              </div>
+
+              <div className="py-3">
+                <span className="text-light">My Youtube: </span>
+                <strong className="fs-3"><a href="https://www.youtube.com/channel/UC33nD8gkUUAJr36E9di1bDA" target="_blank">Medium Guy</a></strong>
+              </div>
+
+              <div className="py-3">
+                <span className="text-light">My Stackoverflow: </span>
+                <strong className="fs-3"><a href="https://stackoverflow.com/users/6038095/sinawic" target="_blank">Sinawic</a></strong>
+              </div>
+
+              <div className="py-3">
+                <span className="text-light">My Github: </span>
+                <strong className="fs-3"><a href="https://github.com/sinawic" target="_blank">Sinawic</a></strong>
+              </div>
+            </div>
+
+            <div className="col-sm-6 pt-5 text-light">
+              <h5>If You Ever Wanted To Support Me, Which Will Help Grow My Works And I'd Greatly Appreciate:</h5>
+              <br />
+              <p>
+                <span>tether trc20 / tron: </span>
+                <Button id="tron" variant="link" onClick={() => {
+                  new ClipboardJS('#tron', { text: () => 'TSF5AKC9TYspjcJSDqaT3b22EfUq8Etyyh' })
+                }}>TSF5AKC9TYspjcJSDqaT3b22EfUq8Etyyh <i className="fas fa-copy"></i></Button>
+
+                <br />
+                <span>ltc: </span>
+                <Button id="ltc" variant="link" onClick={() => {
+                  new ClipboardJS('#ltc', { text: () => 'ltc1qk27exedqyqppjs6ttl00zwg7r9ts7ffqp542qm' })
+                }}>ltc1qk27exedqyqppjs6ttl00zwg7r9ts7ffqp542qm <i className="fas fa-copy"></i></Button>
+
+                <br />
+                <span>btc: </span>
+                <Button id="btc" variant="link" onClick={() => {
+                  new ClipboardJS('#btc', { text: () => 'bc1qzrc42nayymd5psfyrgqthft37tueg90kzpyy3p' })
+                }}>bc1qzrc42nayymd5psfyrgqthft37tueg90kzpyy3p <i className="fas fa-copy"></i></Button>
+              </p>
             </div>
           </div>
         </div>
-      </div>
-      <div className="bg-secondary p-3 mt-5">
+      </section>
+
+      <div className="bg-secondary py-3 mt-5">
         <div className="container d-flex align-items-center">
           <p className="invert m-0 pe-2">
-            @copyright.
+            @2020.
             all rights reserved.
             made with
           </p>
           <i className="fas fa-heart text-danger"></i>
-          <p className="invert m-0 ps-2">by <a className="text-danger" href="https://sinandro.ir" target="_blank">sinawic</a>.</p>
+          <p className="invert m-0 ps-2">by <a className="text-danger" href="https://sinawic.ir" target="_blank">sinawic</a>.</p>
         </div>
       </div>
     </footer>
