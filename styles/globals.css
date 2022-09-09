@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "IranSans";
+  src: url("/fonts/IranSans_FaNum/light.woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IranSans";
+  src: url("/fonts/IranSans_FaNum/medium.woff");
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
+}
+
+:root{
+  --bs-blue:rgb(110,151,212);
+  --bs-indigo:#6610f2;
+  --bs-purple:#6f42c1;
+  --bs-pink:#d63384;
+  --bs-red:#dc3545;
+  --bs-orange:#fd7e14;
+  --bs-yellow:#ffc107;
+  --bs-green:#198754;
+  --bs-teal:#20c997;
+  --bs-cyan:#0dcaf0;
+  --bs-white:#fff;
+  --bs-gray:#6c757d;
+  --bs-gray-dark:#343a40;
+  --bs-gray-100:#f8f9fa;
+  --bs-gray-200:#e9ecef;
+  --bs-gray-300:#dee2e6;
+  --bs-gray-400:#ced4da;
+  --bs-gray-500:#adb5bd;
+  --bs-gray-600:#6c757d;
+  --bs-gray-700:#495057;
+  --bs-gray-800:#343a40;
+  --bs-gray-900:rgb(34,40,46);
+  
+  --bs-primary:rgb(110,151,212);
+  --bs-secondary:#6c757d;
+  --bs-success:#198754;
+  --bs-info:#0dcaf0;
+  --bs-warning:#ffc107;
+  --bs-danger:#dc3545;
+  --bs-light:#f8f9fa;
+  --bs-dark:rgb(34,40,46);
+  --bs-primary-rgb:110,151,212;
+  --bs-secondary-rgb:108,117,125;
+  --bs-success-rgb:25,135,84;
+  --bs-info-rgb:13,202,240;
+  --bs-warning-rgb:255,193,7;
+  --bs-danger-rgb:220,53,69;
+  --bs-light-rgb:248,249,250;
+  --bs-dark-rgb:34,40,46;
+  --bs-white-rgb:255,255,255;
+  --bs-black-rgb:0,0,0;
+  --bs-body-color-rgb:34,40,46;
+  --bs-body-bg-rgb:255,255,255;
+  --bs-font-sans-serif:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --bs-font-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-body-font-family:var(--bs-font-sans-serif);
+  --bs-body-font-size:1rem;
+  --bs-body-font-weight:400;
+  --bs-body-line-height:1.5;
+  --bs-body-color:rgb(34,40,46);
+  --bs-body-bg:#fff}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: IranSans !important;
+}
+
+#main{margin-top: 70px;}
+
+.invert{filter: invert(1)}
+.rtl{direction: rtl;}
+.ltr{direction: ltr;}
+.text-justify{text-align: justify;}
+.search-filter{
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.bold{font-weight: bold;}
+
+a, button {
+  color: inherit;
+  text-decoration: none!important;
+}
+
+ul {list-style: none;}
+
+* {
+  box-sizing: border-box;
+  position: relative;
+  transition: .3s;
+}
+
+#loading{
+  min-height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#loading.full{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1999;
+  background: #60606078;
+}
+
+#site-heading{
+  position: absolute;
+  right: calc(30% - 141px);
+  top: 115px;
+}
+
+.hero-box{
+  position: absolute;
+  border-radius: 72px;
+  transform: rotate(90deg);
+  bottom: 475px;
+  left: calc(32% - 28px)
+}
+
+.form-floating label{ right: 0; left: auto!important }
+.form-floating input, .form-floating textarea{ text-align: inherit }
+
+.Toastify__toast-body > div:last-child {font-family: 'IranSans'}
+
+.modal-header .btn-close{margin: -0.5rem auto -0.5rem -0.5rem !important;}
+.modal-content{background-color: var(--bs-light) !important;}
+#api-help strong{color: var(--bs-primary)}
+
+
+@media (max-width: 500px) {
+  .hero-box{
+    bottom: 575px;
+    left: 75%
+  }
+  #site-heading{
+    position: absolute;
+    right: 8px;
+    top: 215px
+  }
+}
