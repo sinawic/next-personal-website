@@ -10,7 +10,7 @@ export default function Layout() {
         <div className="row flex-row-reverse">
           <div className="col-sm-4 text-end ps-4">
             <strong className="fs-4">چرا ما</strong>
-            <p className="text-justify pt-3" dir="rtl">
+            <p className="text-justify pt-3">
               <strong>{appData.name} </strong>
               سعی بر آن دارد تا با فراهم آوردن امکانات
               مورد نیاز اکثریت مردم

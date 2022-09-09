@@ -1,5 +1,7 @@
 
 export const pages = [
-  { title: 'home', path: '/', active: 'index' }
+  { title: 'Home', path: '/', active: 'index' },
+  { title: 'Info', path: '/', active: 'info' },
+  { title: 'Contact', path: '/', active: 'contact' }
 ]
 
