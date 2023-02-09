@@ -31,7 +31,7 @@ export default function Layout() {
 
               <div className="py-3">
                 <span className="text-light">My Instagram: </span>
-                <strong className="fs-3"><a href="https://www.instagram.com/react.er/" target="_blank">react.er</a></strong>
+                <strong className="fs-3"><a href="https://www.instagram.com/sina.wic/" target="_blank">sina.wic</a></strong>
               </div>
 
               <div className="py-3">
