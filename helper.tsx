@@ -48,7 +48,7 @@ export const tools = [
   { title: 'mysql', src: 'mysql.png' },
   { title: 'nginx', src: 'nginx.png' },
   { title: 'nodejs', src: 'nodejs.png' },
-  { title: 'postgre', src: 'postgre.png' },
+  { title: 'postgres', src: 'postgres.png' },
   { title: 'prom', src: 'prom.png' },
   { title: 'python', src: 'python.png' },
   { title: 'rabbit', src: 'rabbit.png' },
